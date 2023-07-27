@@ -1,4 +1,4 @@
 //TIPOS PRIMITIVOS
-void main(){
-
+void main() {
+  print("object");
 }
