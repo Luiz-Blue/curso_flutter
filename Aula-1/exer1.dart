@@ -6,7 +6,7 @@ void main() {
   int? idade = null;
   print('a idade de $nome_aluno é ${idade ?? 20}');
 
-  bool entrou_recente = true;
+  bool entrou_recente = false;
   if (entrou_recente) {
     print('entrou recentemente');
   } else {
