@@ -1,6 +1,6 @@
+//CADASTRO DE ALUNO
+
 void main() {
-  print("olá mundo");
-  print("olá mundo");
-  
+
 
 }

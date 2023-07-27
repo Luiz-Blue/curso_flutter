@@ -1,0 +1,4 @@
+//TIPOS PRIMITIVOS
+void main(){
+
+}
