@@ -23,6 +23,7 @@ void main() {
       print('numero errado tente um valor menor');
     } else {
       print('parabens voce acertou');
+      break;
     }
   }
 }
