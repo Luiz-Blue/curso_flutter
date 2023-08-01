@@ -32,7 +32,8 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             title: Text
-              ('Minhas Receitas')
+              ('Minhas Receitas',
+               style: TextStyle(color:Colors.white) ,)
               ),
                 body: Column(
                   mainAxisAlignment:MainAxisAlignment.start ,
