@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'JDV.dart';
 
 class lobby extends StatelessWidget {
   @override
@@ -21,13 +22,17 @@ class _GameSetupScreenState extends State<lobbyDoJogo> {
 
   void _botaoInicio() {
     setState(() {
-      isPlayButtonEnabled = jogador1Nome.text.isNotEmpty &&
-          jogador2Nome.text.isNotEmpty;
+      isPlayButtonEnabled =
+          jogador1Nome.text.isNotEmpty && jogador2Nome.text.isNotEmpty;
     });
   }
 
   void _startGame() {
     if (isPlayButtonEnabled) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => jogo()),
+      );
     }
   }
 
@@ -41,32 +46,34 @@ class _GameSetupScreenState extends State<lobbyDoJogo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: const  EdgeInsets.all(16.0),
-             child: TextField(
-              controller: jogador1Nome,
-              onChanged: (_) => _botaoInicio(),
-              decoration: InputDecoration(
-                labelText: 'jogador 1',
-                border: OutlineInputBorder(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                controller: jogador1Nome,
+                onChanged: (_) => _botaoInicio(),
+                decoration: InputDecoration(
+                  labelText: 'jogador 1',
+                  border: OutlineInputBorder(),
                 ),
               ),
             ),
             SizedBox(height: 16),
-            Padding(padding: const  EdgeInsets.all(16.0),
-            child: TextField(
-              controller: jogador2Nome,
-              onChanged: (_) => _botaoInicio(),
-              decoration: InputDecoration(
-                labelText: 'jogador 2',
-                border: OutlineInputBorder(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                controller: jogador2Nome,
+                onChanged: (_) => _botaoInicio(),
+                decoration: InputDecoration(
+                  labelText: 'jogador 2',
+                  border: OutlineInputBorder(),
+                ),
               ),
-             ),
             ),
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: _startGame,
               child: Text('começa o jogo'),
-              style: ElevatedButton.styleFrom() ,
+              style: ElevatedButton.styleFrom(),
             ),
           ],
         ),
@@ -74,6 +81,3 @@ class _GameSetupScreenState extends State<lobbyDoJogo> {
     );
   }
 }
-
-
-
